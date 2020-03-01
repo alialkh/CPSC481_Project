@@ -1,0 +1,14 @@
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\bin\Debug\CPSC481.exe.config
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\bin\Debug\CPSC481.exe
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\bin\Debug\CPSC481.pdb
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.csprojAssemblyReference.cache
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\MainWindow.g.cs
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\App.g.cs
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481_MarkupCompile.cache
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481_MarkupCompile.lref
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\MainWindow.baml
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.g.resources
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.Properties.Resources.resources
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.csproj.GenerateResource.cache
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.exe
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.pdb
