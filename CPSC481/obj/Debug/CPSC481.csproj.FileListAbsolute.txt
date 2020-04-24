@@ -12,3 +12,5 @@ C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.Properties.Reso
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.csproj.GenerateResource.cache
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.exe
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.pdb
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\Simple Styles.baml
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\App.baml

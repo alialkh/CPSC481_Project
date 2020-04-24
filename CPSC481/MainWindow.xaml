@@ -5,8 +5,164 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="800" Width="1260">
+
+    <Grid Margin="0,0,0,0" Background="White" x:Name="everything">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="Overlay" Opacity="0.75" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="412*"/>
+                <RowDefinition Height="359*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Stretch="Uniform" Grid.RowSpan="2">
+                <Rectangle HorizontalAlignment="Left" Height="800" VerticalAlignment="Top" Width="1260" Margin="0,0,0,0">
+                    <Rectangle.Fill>
+                        <Brush>LightGray</Brush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Viewbox>
+            <Rectangle x:Name="overlayRect" Grid.RowSpan="2">
+                <Rectangle.Fill>
+                    Black
+                </Rectangle.Fill>
+            </Rectangle>
+            <Grid Margin="194,386,193.6,153.4" Grid.RowSpan="2" HorizontalAlignment="Center" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave" x:Name="prefTable">
+                <Label Content="Outdoor Cooking" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20" Margin="669,0,-0.4,0"/>
+                <Label Content="Steak" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="692,42,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Barbeque" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="692,78,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Burgers" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="692,119,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Dietary" HorizontalAlignment="Left" Height="37" Margin="16,-2,0,0" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Label Content="Gluten Free" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="40,40,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Vegan" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="40,76,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Vegetarian" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="40,117,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Cuisine" HorizontalAlignment="Left" Height="37" Margin="449,0,0,0" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Label Content="Italian" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="473,42,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="French" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="473,78,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Medittereanean" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="473,119,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Cooking Styles" HorizontalAlignment="Left" Height="37" Margin="231,0,0,0" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Label Content="Baking" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="255,42,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Frying" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="14" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="255,78,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Slow Cooking" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="155" FontSize="14" HorizontalContentAlignment="Center" Foreground="White" Margin="255,119,0,0" MouseDown="Label_MouseDown"/>
+                <Button Content="Clear" HorizontalAlignment="Center" Margin="373,191,370.6,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.096,-0.421" Height="30" Click="clearPrefs"/>
+                <Button Content="Save Preferences" HorizontalAlignment="Center" Margin="265,191,478.6,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.096,-0.421" Height="30" Background="#FF45FA00" Click="returnPreferences"/>
+                <Button Content="Cancel" HorizontalAlignment="Center" Margin="482,191,261.6,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.096,-0.421" Height="30" Click="cancelPrefs" Background="Red" Foreground="White"/>
+            </Grid>
+            <Label Content="Click and choose your Cooking Preferences to Tailor your results" HorizontalAlignment="Center" Height="54" Margin="0,169,0,0" VerticalAlignment="Top" Width="705" FontSize="24" Foreground="#FFFFF6F6" x:Name="prefHeader"/>
+
+        </Grid>
+        <Grid x:Name="grid" Height="141" VerticalAlignment="Top" Margin="87,10,106.6,0" HorizontalAlignment="Center" Width="1060">
+            <Label Content="" VerticalAlignment="Top" Margin="0,109,10,0" Height="32" BorderBrush="#FFA67272" BorderThickness="0,0,0,1" FontSize="24" HorizontalAlignment="Right" Width="1040"/>
+            <Label Content="BUDGET BITES&#xA;" Height="86.24" Margin="41.6,0,210.4,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.483" FontSize="72" VerticalContentAlignment="Center" Background="{x:Null}" FontFamily="Microsoft YaHei UI Light" FlowDirection="RightToLeft" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Right" BorderThickness="0" BorderBrush="#FFA67272" Width="911.1"/>
+            <Label Content="Frugality is our passion" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="213.816,86.24,0,0" Height="39.293" Width="731.994" BorderThickness="0,0,0,1" FontSize="20" Opacity="0.4"/>
+        </Grid>
+        <Grid Margin="59,534,330.6,73">
+            <Label Content="Browse Different Categories" HorizontalAlignment="Center" Height="44" Margin="38,0,337,0" VerticalAlignment="Top" Width="489" FontFamily="Trebuchet MS" FontSize="26" BorderThickness="0,0,0,1" Foreground="#FFA67272" FontWeight="Bold"/>
+            <Grid Margin="199,64,-129,-32.6" HorizontalAlignment="Center" VerticalAlignment="Center" Height="132" Width="794" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="656.474"/>
+                </Grid.ColumnDefinitions>
+                <Ellipse Margin="202,28,336.6,0" RenderTransformOrigin="2.084,0.895">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="p3_burned.png" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Label Content="Dinner" HorizontalAlignment="Left" Margin="413.164,0,0,0" VerticalAlignment="Top" Width="101.601" HorizontalContentAlignment="Center" Height="38.342" FontSize="18" FontWeight="Bold"/>
+                <Label Content="Lunch" HorizontalAlignment="Center" Margin="211.697,0,343.177,0" VerticalAlignment="Top" Width="101.6" HorizontalContentAlignment="Center" Height="38.342" FontSize="18" FontWeight="Bold"/>
+                <Label Content="Breakfast" HorizontalAlignment="Center" Margin="21.05,0,533.824,0" VerticalAlignment="Top" Width="101.6" HorizontalContentAlignment="Center" Height="38.342" FontSize="18" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontWeight="Bold"/>
+                <Label Content="Dessert" HorizontalAlignment="Center" Margin="608,-2,-52.4,0" VerticalAlignment="Top" Width="102" HorizontalContentAlignment="Center" Height="38" FontSize="18" FontWeight="Bold"/>
+                <Ellipse Fill="#FF898989" Stroke="#FFFFFBFB" StrokeThickness="0" Height="85.338" VerticalAlignment="Center" Margin="413.164,38.342,141.709,0" Width="101.601"/>
+                <Ellipse Margin="10,28,526.6,0" RenderTransformOrigin="2.084,0.895">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="p4_burned.png" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Margin="407,28,136.6,0" RenderTransformOrigin="2.084,0.895">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="p1.png" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Margin="596,22,-75.4,0" RenderTransformOrigin="2.084,0.895">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="p2_burned.png" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Grid Margin="400,32,136.6,0" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                    <Button Content="Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="121" Opacity="0" Click="DinnerListener"/>
+                </Grid>
+                <Grid Margin="202,32,334.6,0" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                    <Button HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="121" Opacity="0" Click="LunchListener"/>
+                </Grid>
+                <Grid Margin="596,32,-59.4,0" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                    <Button Content="Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="121" Opacity="0" Click="DesertListener"/>
+                </Grid>
+                <Grid Margin="10,32,526.6,0" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                    <Button Content="Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="121" Opacity="0" Click="BreakfastListener"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Margin="200,226,73.6,386.4" Width="980.147">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="91*"/>
+                <ColumnDefinition Width="97*"/>
+                <ColumnDefinition Width="57*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Cooking Preferences" HorizontalAlignment="Center" Height="34" Margin="2,10,79,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="147" FontFamily="Segoe UI Semilight" Grid.Column="2"
+                    Click="PreferencesListener">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFCCCCCC" Offset="0"/>
+                        <GradientStop Color="#FFA67272" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFEEEEEE" Offset="0"/>
+                        <GradientStop Color="#FFA67272" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Border BorderBrush="#FF898181" BorderThickness="1.5" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="727" CornerRadius="15" Grid.ColumnSpan="2" Background="White">
+                <Grid>
+                    <TextBox HorizontalAlignment="Left" Height="36.4" TextWrapping="Wrap" VerticalAlignment="Top" Width="706.888" 
+                TextAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" 
+                BorderThickness="0" ClipToBounds="True" FontSize="24" AutomationProperties.Name="Search"
+                 Margin="8.5,8.5,0,0" Opacity="1" x:Name="SearchTermTextBox"/>
+                    <TextBlock IsHitTestVisible="False" Text="Type your Recipe, or some keywords and let us do the searching for you" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0" Foreground="DarkGray">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </Border>
+            <Button Content="Show me a random recipe" HorizontalAlignment="Center" Height="45" Margin="87,98,80,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="221" FontFamily="Segoe UI Semilight" FontSize="18px" Grid.Column="1" Click="RandomRecipeListener">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFEEEEEE" Offset="0"/>
+                        <GradientStop Color="#FFADA6A6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Content="Search" HorizontalAlignment="Center" Height="45" Margin="68,98,75,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="221" FontFamily="Segoe UI Semilight" FontSize="30px" Click="SearchButtonListener">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFEEEEEE" Offset="0"/>
+                        <GradientStop Color="#FFADA6A6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
     </Grid>
 </Window>

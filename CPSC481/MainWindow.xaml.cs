@@ -20,9 +20,132 @@ namespace CPSC481
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        int zIndexOfOverlay;
+        Vector members = new Vector();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            // Hide all the preferences crap
+
+            overlayRect.Visibility = Visibility.Hidden;
+            Overlay.Opacity = 1;
+
+            zIndexOfOverlay = Panel.GetZIndex(Overlay);
+
+            prefTable.Visibility = Visibility.Hidden;
+            prefHeader.Visibility = Visibility.Hidden;
+
+        }
+
+        private void PreferencesListener(object sender, RoutedEventArgs e)
+        {
+            overlayRect.Visibility = Visibility.Visible;
+            Panel.SetZIndex(Overlay, 1000);
+            Overlay.Opacity = 0.85;
+
+            prefTable.Visibility = Visibility.Visible;
+            prefHeader.Visibility = Visibility.Visible;
+
+        }
+
+        private void returnPreferences(object sender, RoutedEventArgs e)
+        {
+            overlayRect.Visibility = Visibility.Hidden;
+            Overlay.Opacity = 1;
+            Panel.SetZIndex(Overlay, zIndexOfOverlay);
+
+            prefTable.Visibility = Visibility.Hidden;
+            prefHeader.Visibility = Visibility.Hidden;
+        }
+
+        private void clearPrefs(object sender, RoutedEventArgs e)
+        {
+            foreach (UIElement x in prefTable.Children)
+            {
+                if (x is Label)
+                {
+                    Label y = x as Label;
+                    if (y.Foreground.ToString().Equals(new SolidColorBrush(Colors.Green).Color.ToString()))
+                    {
+                        y.Foreground = new SolidColorBrush(Colors.White);
+                    }
+                }
+            }
+        }
+
+        private void cancelPrefs(object sender, RoutedEventArgs e) 
+        {
+            foreach (UIElement x in prefTable.Children)
+            {
+                if (x is Label)
+                {
+                    Label y = x as Label;
+                    if (y.Foreground.ToString().Equals(new SolidColorBrush(Colors.Green).Color.ToString()))
+                    {
+                        y.Foreground = new SolidColorBrush(Colors.White);
+                    }
+                }
+            }
+
+            returnPreferences(null, null);
+        }
+
+        private void SearchButtonListener(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RandomRecipeListener(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BreakfastListener(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LunchListener(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DinnerListener(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DesertListener(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Grid_MouseEnter(object sender, MouseEventArgs e)
+        {                                   
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void Grid_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
+        }
+
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Label choice = sender as Label;
+
+            if (choice.Foreground.ToString().Equals(new SolidColorBrush(Colors.Green).Color.ToString()))
+            {
+                choice.Foreground = new SolidColorBrush(Colors.White);
+            }
+            else
+            {
+                choice.Foreground = new SolidColorBrush(Colors.Green);
+            }
+
         }
     }
 }
