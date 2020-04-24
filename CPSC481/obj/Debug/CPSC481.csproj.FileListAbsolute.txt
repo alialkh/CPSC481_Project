@@ -12,3 +12,20 @@ C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.Properties.Reso
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.csproj.GenerateResource.cache
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.exe
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.pdb
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481.csprojAssemblyReference.cache
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481.exe
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481.pdb
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\bin\Debug\CPSC481.exe.config
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\bin\Debug\CPSC481.exe
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\bin\Debug\CPSC481.pdb
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\App.g.cs
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481_MarkupCompile.cache
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481_MarkupCompile.lref
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481.g.resources
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481.Properties.Resources.resources
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481.csproj.GenerateResource.cache
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\FrenchToastCard.g.cs
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\FrenchToastCard.baml
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\CPSC481.csproj.CoreCompileInputs.cache
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\Instructions.g.cs
+C:\Users\Trilok Patel\Desktop\GitHub\CPSC481_Project\CPSC481\obj\Debug\Instructions.baml
