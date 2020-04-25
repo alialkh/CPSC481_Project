@@ -99,16 +99,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="breakfast.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="breakfast2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="p1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="p2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="p2_burned.png" />
