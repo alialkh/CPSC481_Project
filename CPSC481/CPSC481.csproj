@@ -55,6 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="trilokStuff\FrenchToastCard.xaml.cs">
+      <DependentUpon>FrenchToastCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="trilokStuff\Instructions.xaml.cs">
+      <DependentUpon>Instructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="trilokStuff\trilok_MainWindow.xaml.cs">
+      <DependentUpon>trilok_MainWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +77,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="trilokStuff\FrenchToastCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="trilokStuff\Instructions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="trilokStuff\trilok_MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -112,6 +133,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="p4_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="trilokStuff\Cancel.jpg" />
+    <Resource Include="trilokStuff\classic-oatmeal-225x225.png" />
+    <Resource Include="trilokStuff\frenchToast.jpg" />
+    <Resource Include="trilokStuff\FrenchToast1.jpg" />
+    <Resource Include="trilokStuff\heartFill.png" />
+    <Resource Include="trilokStuff\heartNoFill.png" />
+    <Resource Include="trilokStuff\imagePlaceholder.png" />
+    <Resource Include="trilokStuff\oneStar.png" />
+    <Resource Include="trilokStuff\whole-wheat-cinnamon-raisin-waffles.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

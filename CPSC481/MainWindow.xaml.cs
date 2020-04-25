@@ -13,6 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+// trilokStuff import! 
+// all of triloks .CS files fall under the WpfApp1 namespace, and thats why we are using it here
+using WpfApp1;
+
 namespace CPSC481
 {
     /// <summary>
@@ -95,32 +100,55 @@ namespace CPSC481
 
         private void SearchButtonListener(object sender, RoutedEventArgs e)
         {
+            Window trilokStuff = new trilok_MainWindow();
+            trilokStuff.Show();
 
+            this.Close();
         }
 
         private void RandomRecipeListener(object sender, RoutedEventArgs e)
         {
+            // fire up the french toast card immediately
+            Window trilokStuff = new FrenchToastCard();
+            trilokStuff.Show();
 
+            this.Close();
         }
 
         private void BreakfastListener(object sender, RoutedEventArgs e)
         {
+            // fire up the french toast card immediately
+            Window trilokStuff = new FrenchToastCard();
+            trilokStuff.Show();
 
+            this.Close();
         }
 
         private void LunchListener(object sender, RoutedEventArgs e)
         {
+            // fire up the french toast card immediately
+            Window trilokStuff = new FrenchToastCard();
+            trilokStuff.Show();
 
+            this.Close();
         }
 
         private void DinnerListener(object sender, RoutedEventArgs e)
         {
+            // fire up the french toast card immediately
+            Window trilokStuff = new FrenchToastCard();
+            trilokStuff.Show();
 
+            this.Close();
         }
 
         private void DesertListener(object sender, RoutedEventArgs e)
         {
+            // fire up the french toast card immediately
+            Window trilokStuff = new FrenchToastCard();
+            trilokStuff.Show();
 
+            this.Close();
         }
 
         private void Grid_MouseEnter(object sender, MouseEventArgs e)

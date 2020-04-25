@@ -8,6 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("breakfast2.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/cancel.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/classic-oatmeal-225x225.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/frenchtoast.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/frenchtoast1.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/heartfill.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/heartnofill.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/imageplaceholder.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/onestar.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trilokstuff/whole-wheat-cinnamon-raisin-waffles.jpg")]
 
 

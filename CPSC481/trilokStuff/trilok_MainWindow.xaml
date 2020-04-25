@@ -1,0 +1,188 @@
+﻿<Window x:Class="WpfApp1.trilok_MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1280">
+    <Grid>
+        <Grid x:Name="Overlay" Opacity="0.75" >
+            <Rectangle x:Name="overlayRect" Grid.RowSpan="2">
+                <Rectangle.Fill>
+                    Black
+                </Rectangle.Fill>
+            </Rectangle>
+            <Grid Margin="194,386,193.6,153.4" Grid.RowSpan="2" HorizontalAlignment="Center" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave" x:Name="prefTable">
+                <Label Content="Outdoor Cooking" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20" Margin="669,0,-0.4,0"/>
+                <Label Content="Steak" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="692,42,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Barbeque" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="692,78,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Burgers" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="692,119,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Dietary" HorizontalAlignment="Left" Height="37" Margin="16,-2,0,0" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Label Content="Gluten Free" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="40,40,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Vegan" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="40,76,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Vegetarian" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="40,117,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Cuisine" HorizontalAlignment="Left" Height="37" Margin="449,0,0,0" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Label Content="Italian" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="473,42,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="French" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="473,78,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Medittereanean" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="473,119,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Cooking Styles" HorizontalAlignment="Left" Height="37" Margin="231,0,0,0" VerticalAlignment="Top" Width="197" Foreground="White" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Label Content="Baking" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="255,42,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Frying" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" FontSize="14" HorizontalContentAlignment="Center" Foreground="White" Width="155" Margin="255,78,0,0" MouseDown="Label_MouseDown"/>
+                <Label Content="Slow Cooking" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="155" FontSize="14" HorizontalContentAlignment="Center" Foreground="White" Margin="255,119,0,0" MouseDown="Label_MouseDown"/>
+                <Button Content="Clear" HorizontalAlignment="Center" Margin="373,191,370.6,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.096,-0.421" Height="30" Click="clearPrefs"/>
+                <Button Content="Save Preferences" HorizontalAlignment="Center" Margin="265,191,478.6,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.096,-0.421" Height="30" Background="#FF45FA00" Click="returnPreferences"/>
+                <Button Content="Cancel" HorizontalAlignment="Center" Margin="482,191,261.6,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.096,-0.421" Height="30" Click="cancelPrefs" Background="Red" Foreground="White"/>
+            </Grid>
+            <Label Content="Click and choose your Cooking Preferences to Tailor your results" HorizontalAlignment="Center" Height="54" Margin="0,169,0,0" VerticalAlignment="Top" Width="705" FontSize="24" Foreground="#FFFFF6F6" x:Name="prefHeader"/>
+        </Grid>
+
+        <TextBox HorizontalAlignment="Left" Margin="134,21,0,0" BorderThickness="2" BorderBrush="Black" Text="Search Recipe" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" Height="29" FontSize="19" Foreground="DarkGray"/>
+        <Button Style="{DynamicResource SimpleButton}" Content="Cooking Preferences" HorizontalAlignment="Left" Margin="720,21,0,0" VerticalAlignment="Top" Height="29" Width="266" Click="PreferencesListener">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFEEEEEE" Offset="0"/>
+                    <GradientStop Color="#FFA67272" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Style="{DynamicResource SimpleButton}" Content="Favorites" HorizontalAlignment="Left" Margin="1055,21,0,0" VerticalAlignment="Top" Height="29" Width="171"/>
+        <Button Name = "refineOne" Content="Refine Search" ClickMode="Press" HorizontalAlignment="Left" Margin="-59,142,0,0" VerticalAlignment="Top" Height="45" Width="163" RenderTransformOrigin="0.5,0.5" FontSize="20" Click="refineOne_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="listOne" Content="Grocery List" HorizontalAlignment="Right" Margin="0,142,-60,0" VerticalAlignment="Top" Height="45" Width="163" RenderTransformOrigin="0.5,0.5" FontSize="20" Click="listOne_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <StackPanel Margin="134,146,140,0" Background="Gray">
+            <Grid Height="173" Width="1004" MouseLeftButtonDown="GoToRecipeCard">
+                <Image HorizontalAlignment="Left" Height="146" Margin="10,10,0,0" VerticalAlignment="Top" Width="164" Source="frenchToast.jpg"/>
+                <Label Content="French Toast" HorizontalAlignment="Left" Margin="161,10,0,0" VerticalAlignment="Top" Width="186" Height="66" FontSize="30"/>
+                <Label Content="Add to Grocery List" HorizontalAlignment="Left" Margin="857,10,0,0" VerticalAlignment="Top" Height="33" Width="137" FontSize="15" Foreground="Blue"/>
+                <Label Name="favOne" Content="Favorite" HorizontalAlignment="Left" Margin="760,12,0,0" VerticalAlignment="Top" Width="92" FontSize="15" Foreground="DarkOrange" MouseDown="favOne_MouseDown"/>
+                <Label Content="Cost: $10" HorizontalAlignment="Left" Margin="792,38,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <Label Content="Serves: 4" HorizontalAlignment="Left" Margin="792,75,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <TextBlock HorizontalAlignment="Left" Margin="161,57,0,0" Text="Vanilla extract and cinnamon bring a richness of flavor when making French toast. Pick your favorite bread - white, Italian, French, or whole wheat and serve with our Easy Spiced Syrup for a tasty French toast recipe. Learn how to make French toast today!" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="626" FontSize="15"/>
+                <Image HorizontalAlignment="Left" Height="171" Margin="770,57,0,0" VerticalAlignment="Top" Width="230" Source="oneStar.png" Stretch="Fill" RenderTransformOrigin="0.077,0.037"/>
+                <Label Content="Breakfast" HorizontalAlignment="Left" Margin="171,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="LightGreen"/>
+                <Label Content="Simple" HorizontalAlignment="Left" Margin="259,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Yellow"/>
+                <Image HorizontalAlignment="Left" Height="37" Margin="10,12,0,0" VerticalAlignment="Top" Width="43" Source="heartFill.png"/>
+            </Grid>
+            <Grid Height="173" Width="1004">
+                <Image HorizontalAlignment="Left" Height="146" Margin="10,10,0,0" VerticalAlignment="Top" Width="164" Source="imagePlaceholder.png"/>
+                <Label Content="Recipe" HorizontalAlignment="Left" Margin="161,10,0,0" VerticalAlignment="Top" Width="186" Height="66" FontSize="30"/>
+                <Label Content="Add to Grocery List" HorizontalAlignment="Left" Margin="857,10,0,0" VerticalAlignment="Top" Height="33" Width="137" FontSize="15" Foreground="Blue"/>
+                <Label Name="favTwo" Content="Favorite" HorizontalAlignment="Left" Margin="760,12,0,0" VerticalAlignment="Top" Width="92" FontSize="15" Foreground="Black" MouseDown="favTwo_MouseDown"/>
+                <Label Content="Cost: $X" HorizontalAlignment="Left" Margin="792,38,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <Label Content="Serves: X" HorizontalAlignment="Left" Margin="792,75,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <TextBlock HorizontalAlignment="Left" Margin="161,57,0,0" Text="Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, " TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="626" FontSize="15"/>
+                <Image HorizontalAlignment="Left" Height="171" Margin="770,57,0,0" VerticalAlignment="Top" Width="230" Source="oneStar.png" Stretch="Fill" RenderTransformOrigin="0.077,0.037"/>
+                <Label Content="Breakfast" HorizontalAlignment="Left" Margin="171,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="LightGreen"/>
+                <Label Content="TagTwo" HorizontalAlignment="Left" Margin="259,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Yellow"/>
+                <Image HorizontalAlignment="Left" Height="37" Margin="10,12,0,0" VerticalAlignment="Top" Width="43" Source="heartNoFill.png"/>
+            </Grid>
+            <Grid Height="173" Width="1004">
+                <Image HorizontalAlignment="Left" Height="146" Margin="10,10,0,0" VerticalAlignment="Top" Width="164" Source="imagePlaceholder.png"/>
+                <Label Content="Recipe" HorizontalAlignment="Left" Margin="161,10,0,0" VerticalAlignment="Top" Width="186" Height="66" FontSize="30"/>
+                <Label Content="Add to Grocery List" HorizontalAlignment="Left" Margin="857,10,0,0" VerticalAlignment="Top" Height="33" Width="137" FontSize="15" Foreground="Blue"/>
+                <Label Name="favThree" Content="Favorite" HorizontalAlignment="Left" Margin="760,12,0,0" VerticalAlignment="Top" Width="92" FontSize="15" MouseDown="favThree_MouseDown"/>
+                <Label Content="Cost: $X" HorizontalAlignment="Left" Margin="792,38,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <Label Content="Serves: X" HorizontalAlignment="Left" Margin="792,75,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <TextBlock HorizontalAlignment="Left" Margin="161,57,0,0" Text="Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, " TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="626" FontSize="15"/>
+                <Image HorizontalAlignment="Left" Height="171" Margin="770,57,0,0" VerticalAlignment="Top" Width="230" Source="oneStar.png" Stretch="Fill" RenderTransformOrigin="0.077,0.037"/>
+                <Label Content="Breakfast" HorizontalAlignment="Left" Margin="171,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="LightGreen"/>
+                <Label Content="TagTwo" HorizontalAlignment="Left" Margin="259,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Yellow"/>
+                <Image HorizontalAlignment="Left" Height="37" Margin="10,12,0,0" VerticalAlignment="Top" Width="43" Source="heartNoFill.png"/>
+            </Grid>
+            <Grid Height="173" Width="1004">
+                <Image HorizontalAlignment="Left" Height="146" Margin="10,10,0,0" VerticalAlignment="Top" Width="164" Source="imagePlaceholder.png"/>
+                <Label Content="Recipe" HorizontalAlignment="Left" Margin="161,10,0,0" VerticalAlignment="Top" Width="186" Height="66" FontSize="30"/>
+                <Label Content="Add to Grocery List" HorizontalAlignment="Left" Margin="857,10,0,0" VerticalAlignment="Top" Height="33" Width="137" FontSize="15" Foreground="Blue"/>
+                <Label Name="favFour" Content="Favorite" HorizontalAlignment="Left" Margin="760,12,0,0" VerticalAlignment="Top" Width="92" FontSize="15" MouseDown="favFour_MouseDown"/>
+                <Label Content="Cost: $X" HorizontalAlignment="Left" Margin="792,38,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <Label Content="Serves: X" HorizontalAlignment="Left" Margin="792,75,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="20"/>
+                <TextBlock HorizontalAlignment="Left" Margin="161,57,0,0" Text="Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, " TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="626" FontSize="15"/>
+                <Image HorizontalAlignment="Left" Height="171" Margin="770,57,0,0" VerticalAlignment="Top" Width="230" Source="oneStar.png" Stretch="Fill" RenderTransformOrigin="0.077,0.037"/>
+                <Label Content="Breakfast" HorizontalAlignment="Left" Margin="171,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="LightGreen"/>
+                <Label Content="TagTwo" HorizontalAlignment="Left" Margin="259,126,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Yellow"/>
+                <Image HorizontalAlignment="Left" Height="37" Margin="10,12,0,0" VerticalAlignment="Top" Width="43" Source="heartNoFill.png"/>
+            </Grid>
+        </StackPanel>
+        <Label Content="Search Categories:" HorizontalAlignment="Left" Margin="134,55,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Cooking Styles:" HorizontalAlignment="Left" Margin="134,83,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Grid Margin="290,55,842,695">
+            <Label Content="Breakfast" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Center" FontSize="15"/>
+            <Image HorizontalAlignment="Left" Height="26" Margin="74,2,0,0" VerticalAlignment="Top" Width="50" Source="Cancel.jpg"/>
+        </Grid>
+        <Grid Name="gridRefine" Margin="0,0,864,0">
+            <Button Name="refineTwo" Content="Refine Search" ClickMode="Press" HorizontalAlignment="Right" Margin="0,142,-105,0" VerticalAlignment="Top" Height="45" Width="163" RenderTransformOrigin="0.5,0.5" FontSize="20" Click ="refineTwo_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Rectangle HorizontalAlignment="Left" Height="784" Stroke="Black" VerticalAlignment="Center" Width="416" Fill="DarkGray" Opacity="0.75" Margin="2,0,0,0"/>
+            <TextBox HorizontalAlignment="Left" Margin="63,183,0,0" Text="From" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="22" Foreground="DarkGray"/>
+            <TextBox HorizontalAlignment="Left" Margin="142,183,0,0" Text="To" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="22" Foreground="DarkGray"/>
+            <Label Content="Budget:" HorizontalAlignment="Left" Margin="63,134,0,0" VerticalAlignment="Top" Height="44" Width="76" FontSize="20"/>
+            <Label Content="Serves:" HorizontalAlignment="Left" Margin="63,219,0,0" VerticalAlignment="Top" Height="44" Width="76" FontSize="20"/>
+            <TextBox HorizontalAlignment="Left" Margin="63,268,0,0" Text="Servings" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="22" Foreground="DarkGray"/>
+            <Label Content="Time:" HorizontalAlignment="Left" Margin="63,304,0,0" VerticalAlignment="Top" Height="44" Width="76" FontSize="20"/>
+            <TextBox HorizontalAlignment="Left" Margin="63,348,0,0" Text="From" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="22" Foreground="DarkGray"/>
+            <TextBox HorizontalAlignment="Left" Margin="142,348,0,0" Text="To" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="22" Foreground="DarkGray"/>
+            <Label Content="Ingredients:" HorizontalAlignment="Left" Margin="63,392,0,0" VerticalAlignment="Top" Height="44" Width="134" FontSize="20"/>
+            <TextBox HorizontalAlignment="Left" Margin="63,436,0,0" Text="Search" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="DarkGray"/>
+            <Button Content="Add" HorizontalAlignment="Left" Margin="197,435,0,0" VerticalAlignment="Top"/>
+            <Rectangle HorizontalAlignment="Left" Height="198" Margin="63,459,0,0" VerticalAlignment="Top" Width="160" Fill="White"/>
+        </Grid>
+        <Grid Name="gridList" Margin="864,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="167*"/>
+                <RowDefinition Height="29*"/>
+            </Grid.RowDefinitions>
+            <Button Name="listTwo" Content="Grocery List" HorizontalAlignment="Left" Margin="-101,147,0,0" VerticalAlignment="Top" Height="45" Width="163" RenderTransformOrigin="0.5,0.5" FontSize="20" Click="listTwo_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Rectangle Fill="DarkGray" Opacity="0.75" HorizontalAlignment="Center" Height="784" Stroke="Black" VerticalAlignment="Top" Width="416" Grid.RowSpan="2"/>
+            <Label Content="Recipes:" HorizontalAlignment="Left" Margin="25,24,0,0" VerticalAlignment="Top" Height="40" Width="96" FontSize="19"/>
+            <Image HorizontalAlignment="Left" Height="34" Margin="25,69,0,0" VerticalAlignment="Top" Width="22" Source="Cancel.jpg"/>
+            <Label Content="French Toast" HorizontalAlignment="Left" Margin="54,66,0,0" VerticalAlignment="Top" Width="175" Height="26"/>
+            <Label Content="Ingredient" HorizontalAlignment="Left" Margin="25,181,0,0" VerticalAlignment="Top" FontSize="19" Height="35" Width="96"/>
+            <Label Content="Quantity" HorizontalAlignment="Left" Margin="275,181,0,0" VerticalAlignment="Top" FontSize="19" Height="35" Width="82"/>
+            <Label Content="Egg" HorizontalAlignment="Left" Margin="38,234,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="Vanilla Extract" HorizontalAlignment="Left" Margin="38,269,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="Ground Cinnamon" HorizontalAlignment="Left" Margin="38,299,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="Milk" HorizontalAlignment="Left" Margin="38,329,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="Bread" HorizontalAlignment="Left" Margin="36,359,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="1" HorizontalAlignment="Left" Margin="275,234,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="1 tsp" HorizontalAlignment="Left" Margin="275,269,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="1/2 tsp" HorizontalAlignment="Left" Margin="275,299,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="1/4 cup" HorizontalAlignment="Left" Margin="275,334,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="4 slices" HorizontalAlignment="Left" Margin="275,364,0,0" VerticalAlignment="Top" FontSize="15"/>
+        </Grid>
+    </Grid>
+</Window>

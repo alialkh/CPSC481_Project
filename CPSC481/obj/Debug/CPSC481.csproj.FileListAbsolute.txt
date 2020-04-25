@@ -14,3 +14,9 @@ C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.exe
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\CPSC481.pdb
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\Simple Styles.baml
 C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\App.baml
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\trilokStuff\FrenchToastCard.g.cs
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\trilokStuff\Instructions.g.cs
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\trilokStuff\FrenchToastCard.baml
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\trilokStuff\Instructions.baml
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\trilokStuff\trilok_MainWindow.g.cs
+C:\Users\alial\Desktop\CPSC481\CPSC481\CPSC481\obj\Debug\trilokStuff\trilok_MainWindow.baml
